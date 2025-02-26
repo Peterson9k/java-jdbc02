@@ -1,21 +1,13 @@
-package entities;
+package models;
 
 public class Cliente {
 	private Integer id;
 	private String nome;
 	private String email;
-	private Integer telefone;
+	private Long telefone;
 	
-	public Cliente(Integer id, String nome, String email, Integer telefone) {
-		super();
+	public Cliente(int id, String nome, String email, long telefone) {
 		this.id = id;
-		this.nome = nome;
-		this.email = email;
-		this.telefone = telefone;
-	}
-	
-	public Cliente(String nome, String email, Integer telefone) {
-		super();
 		this.nome = nome;
 		this.email = email;
 		this.telefone = telefone;
@@ -26,17 +18,33 @@ public class Cliente {
 	public Integer getId() {
 		return id;
 	}
-
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
 	public String getEmail() {
 		return email;
 	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-	public Integer getTelefone() {
+	public Long getTelefone() {
 		return telefone;
+	}
+	
+	public void setTelefone(long telefone) {
+		this.telefone = telefone;
 	}
 
 	@Override
